@@ -160,6 +160,74 @@
         </div>
     </div>
 
+    <!-- Countdown Clock Section - Left -->
+    <div class="countdown-container">
+        <div class="countdown-header">
+            <h2 class="countdown-title">US TOGETHER</h2>
+            <div class="countdown-subtitle">Since we first talked</div>
+        </div>
+        <div class="countdown-clock">
+            <div class="countdown-item">
+                <div class="countdown-number" id="years">0</div>
+                <div class="countdown-label">Years</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="months">0</div>
+                <div class="countdown-label">Months</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">0</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">0</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">0</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">0</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countdown Clock Section - Right -->
+    <div class="countdown-container countdown-right">
+        <div class="countdown-header">
+            <h2 class="countdown-title">TOGETHER</h2>
+            <div class="countdown-subtitle">Since we are together</div>
+        </div>
+        <div class="countdown-clock">
+            <div class="countdown-item">
+                <div class="countdown-number" id="years2">0</div>
+                <div class="countdown-label">Years</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="months2">0</div>
+                <div class="countdown-label">Months</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="days2">0</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours2">0</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes2">0</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds2">0</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script>
     let datetxt = "5th August";
@@ -261,6 +329,50 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+
+    // Countdown Clock Functionality
+    function updateCountdown() {
+        // First countdown - Since we first talked (March 25, 2024 17:36:00)
+        const startDate1 = new Date('March 25, 2024 17:36:00').getTime();
+        const now = new Date().getTime();
+        const difference1 = now - startDate1;
+
+        const years1 = Math.floor(difference1 / (1000 * 60 * 60 * 24 * 365.25));
+        const months1 = Math.floor((difference1 % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+        const days1 = Math.floor((difference1 % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+        const hours1 = Math.floor((difference1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes1 = Math.floor((difference1 % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds1 = Math.floor((difference1 % (1000 * 60)) / 1000);
+
+        document.getElementById('years').textContent = years1;
+        document.getElementById('months').textContent = months1;
+        document.getElementById('days').textContent = days1;
+        document.getElementById('hours').textContent = hours1;
+        document.getElementById('minutes').textContent = minutes1;
+        document.getElementById('seconds').textContent = seconds1;
+
+        // Second countdown - Since we are together (August 18, 2024 15:00:00)
+        const startDate2 = new Date('August 18, 2024 15:00:00').getTime();
+        const difference2 = now - startDate2;
+
+        const years2 = Math.floor(difference2 / (1000 * 60 * 60 * 24 * 365.25));
+        const months2 = Math.floor((difference2 % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+        const days2 = Math.floor((difference2 % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+        const hours2 = Math.floor((difference2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes2 = Math.floor((difference2 % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds2 = Math.floor((difference2 % (1000 * 60)) / 1000);
+
+        document.getElementById('years2').textContent = years2;
+        document.getElementById('months2').textContent = months2;
+        document.getElementById('days2').textContent = days2;
+        document.getElementById('hours2').textContent = hours2;
+        document.getElementById('minutes2').textContent = minutes2;
+        document.getElementById('seconds2').textContent = seconds2;
+    }
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
 </script>
 
 </html>
