@@ -189,7 +189,26 @@ body {
     text-shadow: 0 0 20px var(--color-purple), 0 0 40px var(--color-purple);
     animation: purpleGlow 2s ease-in-out infinite alternate-reverse;
 }
-
+.tittle .mota{
+     position: relative;
+    text-shadow: 4px 4px var(--color-black), 
+                -4px 4px var(--color-black), 
+                4px -4px var(--color-black), 
+                -4px -4px var(--color-black), 
+                4px 8px 0 var(--color-black);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+     color: var(--color-purple);
+    text-shadow: 0 0 20px var(--color-purple), 0 0 40px var(--color-purple);
+    animation: purpleGlow 2s ease-in-out infinite alternate-reverse;
+}
+.title .mota span{
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+    animation: txtTranslateY .5s var(--t) forwards;
+}
 @keyframes purpleGlow {
     from { text-shadow: 0 0 20px var(--color-purple), 0 0 40px var(--color-purple); }
     to { text-shadow: 0 0 30px var(--color-purple), 0 0 60px var(--color-purple), 0 0 80px var(--color-purple); }
