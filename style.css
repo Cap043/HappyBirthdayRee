@@ -95,7 +95,7 @@ body {
 #btn__letter{
     position: relative;
     margin-top: 30px;
-    background: linear-gradient(45deg, var(--color-text-pink), var(--color-accent), var(--color-neon));
+    background: var(--color-heart);
     outline: none;
     padding: 12px 25px;
     font-size: 1.2rem;
@@ -109,8 +109,9 @@ body {
     z-index: 2;
     transform: scale(1);
     transition: all .5s ease-in-out;
-    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4), 0 0 20px rgba(255, 159, 243, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 56, 56, 0.4);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #fff5e6;
 }
 #btn__letter:active{
     transform: scale(0.7);
@@ -119,10 +120,10 @@ body {
     margin-left: 5px;
 }
 #btn__letter:hover{
-    border-color: var(--color-neon);
-    background: linear-gradient(45deg, var(--color-neon), var(--color-purple), var(--color-gold));
-    color: #fff;
-    box-shadow: 0 12px 35px rgba(0, 210, 211, 0.6), 0 0 30px rgba(95, 39, 205, 0.4);
+    border-color: var(--color-black);
+    background: var(--color-heart);
+    color: #fff5e6;
+    box-shadow: 0 12px 35px rgba(255, 56, 56, 0.6);
     transform: scale(1.05);
 }
 
@@ -162,14 +163,7 @@ body {
     justify-content: center;
 }
 .title .happy{
-    color: var(--color-neon);
-    text-shadow: 0 0 20px var(--color-neon), 0 0 40px var(--color-neon);
-    animation: neonGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-    from { text-shadow: 0 0 20px var(--color-neon), 0 0 40px var(--color-neon); }
-    to { text-shadow: 0 0 30px var(--color-neon), 0 0 60px var(--color-neon), 0 0 80px var(--color-neon); }
+    color: var(--color-white);
 }
 .title .happy span, .title .birthday span{
     transform: translateY(50px);
@@ -185,9 +179,7 @@ body {
     }
 }
 .title .birthday{
-    color: var(--color-purple);
-    text-shadow: 0 0 20px var(--color-purple), 0 0 40px var(--color-purple);
-    animation: purpleGlow 2s ease-in-out infinite alternate-reverse;
+    color: var(--color-text-pink);
 }
 .tittle .mota{
      position: relative;
